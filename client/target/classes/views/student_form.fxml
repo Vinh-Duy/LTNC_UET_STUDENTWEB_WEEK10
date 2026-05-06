@@ -53,6 +53,7 @@
             <Insets top="10.0" />
         </padding>
         <Button onAction="#handleSubmit" styleClass="btn-primary" text="Xác nhận Đăng ký" />
+        <Button onAction="#handleLoad" styleClass="btn-primary" style="-fx-background-color: #3498db;" text="Tải dữ liệu DB (Load)" />
         <Button onAction="#handleReset" styleClass="btn-secondary" text="Làm mới Form" />
     </HBox>
 </VBox>

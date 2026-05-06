@@ -1,2 +1,3 @@
+com/student/models/StudentModel.class
 com/student/StudentApp.class
 com/student/controllers/StudentController.class
