@@ -3,8 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" spacing="20.0" styleClass="main-container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" spacing="20.0" styleClass="main-container" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.controllers.StudentController">
     <padding>
         <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
     </padding>
@@ -35,17 +36,23 @@
 
         <Label text="Dịch vụ bổ sung:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
         <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-            <CheckBox text="Đăng ký ở Ký túc xá" />
-            <CheckBox text="Đăng ký vé gửi xe tháng" />
-            <CheckBox text="Đăng ký thẻ Thư viện" />
+            <CheckBox fx:id="chkKtx" text="Đăng ký ở Ký túc xá" />
+            <CheckBox fx:id="chkXe" text="Đăng ký vé gửi xe tháng" />
+            <CheckBox fx:id="chkThuVien" text="Đăng ký thẻ Thư viện" />
         </VBox>
     </GridPane>
+
+    <Label fx:id="lblMessage" text="">
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font>
+    </Label>
 
     <HBox alignment="CENTER" spacing="30.0" styleClass="action-box">
         <padding>
             <Insets top="10.0" />
         </padding>
-        <Button styleClass="btn-primary" text="Xác nhận Đăng ký" />
-        <Button styleClass="btn-secondary" text="Làm mới Form" />
+        <Button onAction="#handleSubmit" styleClass="btn-primary" text="Xác nhận Đăng ký" />
+        <Button onAction="#handleReset" styleClass="btn-secondary" text="Làm mới Form" />
     </HBox>
 </VBox>
