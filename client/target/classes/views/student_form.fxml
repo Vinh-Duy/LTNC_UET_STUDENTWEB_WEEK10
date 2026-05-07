@@ -42,6 +42,8 @@
         </VBox>
     </GridPane>
 
+    <ProgressIndicator fx:id="progressIndicator" visible="false" prefHeight="30.0" prefWidth="30.0" />
+
     <Label fx:id="lblMessage" text="">
         <font>
             <Font name="System Bold" size="13.0" />
